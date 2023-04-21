@@ -1,0 +1,67 @@
+@include media-md{
+    .menu-btn{
+        visibility: hidden;
+    }
+
+    .nav{
+        visibility: visible;
+
+        .menu-nav{
+            transform: translateY(0);
+            transition: none;
+            flex-direction: row nowrap;
+            // border: 1px solid yellow;
+            height: 0;
+            padding: 2rem 0;
+            background-color: rgba(42, 140, 154, 1);
+            backdrop-filter: saturate(180%) blur(10px);
+
+            &_item{
+                transform: translateX(0);
+            }
+
+            &_link{
+                transition: none;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .about_bio {
+        font-size: 1.5rem;
+    }
+    
+    .projects {
+    &__bio-image {
+        height: 40vh;
+    }
+    &__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .text-secondary {
+        font-size: 3rem;
+    }
+    }
+
+    // .contact_list {
+    // grid-template-columns: repeat(2, 1fr);
+    // }
+}
+
+@include media-lg {
+    .projects {
+      &__items {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    // .contact_list {
+    //   grid-template-columns: repeat(3, 1fr);
+    // }
+}
+
+@include media-xl {
+    .projects__bio-image {
+      height: 50vh;
+    }
+  }
